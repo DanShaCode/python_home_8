@@ -39,13 +39,13 @@ def load_data_from(user_data):
         with open(src, 'r', encoding='UTF-8') as file:
             user_data = csv.reader(file, delimiter=';')
             user_data = list(user_data)
-            os.system('cs||clear')
-            print()
-            print("Данные загружены")
-            print()
-            user_await = input("Нажмите Enter")
-            user_data.remove(user_data[0])
-            return user_data
+        os.system('cs||clear')
+        print()
+        print("Данные загружены")
+        print()
+        user_await = input("Нажмите Enter")
+        user_data.remove(user_data[0])
+        return user_data
 
 def data_load_to(user_data):
     os.system('cs||clear')
@@ -66,6 +66,14 @@ def data_load_to(user_data):
     if user_input == '' or user_input == ' ':
         return user_data
     if user_input == '1':
+        os.system('cs||clear')
+        print()
+        print("  -= Телефонный справочник =-")
+        print()
+        print("      СОХРАНЕНИЕ ДАННЫХ")
+        print()
+        print("=================================")
+        print()
         src = input("Укажите, пожалуйста, относительный путь файла: ")
         id = 'id'
         first_name = 'First Name'
