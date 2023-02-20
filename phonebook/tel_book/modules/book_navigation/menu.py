@@ -56,7 +56,7 @@ def menu(user_data):
         user_data = operations_menu(user_data)
         return menu(user_data)
     if user_input == 6:
-        user_data = load_data_from()
+        user_data = load_data_from(user_data)
         return menu(user_data)
     if user_input == 7:
         user_data = data_load_to(user_data)

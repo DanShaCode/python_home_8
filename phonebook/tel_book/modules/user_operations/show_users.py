@@ -10,6 +10,12 @@ from modules.data_operations.add_data_CSV import *
 def user_show(user_data):
     os.system('cs||clear')
     print()
+    print("  -= Телефонный справочник =-")
+    print()
+    print("       ПОКАЗАТЬ КОНТАКТЫ")
+    print()
+    print("=================================")
+    print()
     for user in user_data:
         print(f"ID : {user[0]} | FIRST NAME : {user[1]} | SECOND NAME: {user[2]} | TEL : {user[3]} | E-MAIL: {user[4]} | ADRESS : {user[5]}")
     print()

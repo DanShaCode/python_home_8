@@ -10,33 +10,50 @@ from modules.data_operations.add_data_CSV import *
 def new_user_data(user_data):
     os.system('cs||clear')
     print()
+    print("  -= Телефонный справочник =-")
+    print()
+    print("      ДОБАВЛЕНИЕ КОНТАКТА")
+    print()
+    print("=================================")
+    print()
+    print("(1) Добавить контакт")
+    print()
+    print("(Enter) Назад в Основное меню")
+    print()
+    print('----------------------------------')
+    print()
+    user_input = input("Введите соответствующую цифру из меню: ")
+    if user_input == '' or user_input == ' ':
+        return user_data
+    if user_input == '1':
+        os.system('cs||clear')
+        print()
+        user_info = []
+        
+        uniqe_id  = str(len(user_data) + 1)
+        user_info.append(uniqe_id)
+
+        user_first = input("Введите Имя: ")
+        user_info.append(user_first)
     
-    user_info = []
-    
-    uniqe_id  = str(len(user_data) + 1)
-    user_info.append(uniqe_id)
+        print()
+        user_second = input("Введите Фамилию: ")
+        user_info.append(user_second)
+        print()
 
-    user_first = input("Введите Имя: ")
-    user_info.append(user_first)
- 
-    print()
-    user_second = input("Введите Фамилию: ")
-    user_info.append(user_second)
-    print()
+        user_tel = input("Введите Телефон: ")
+        user_info.append(user_tel)
+        print()
 
-    user_tel = input("Введите Телефон: ")
-    user_info.append(user_tel)
-    print()
+        user_mail = input("Введите е-mail: ")
+        user_info.append(user_mail)
+        print()
 
-    user_mail = input("Введите е-mail: ")
-    user_info.append(user_mail)
-    print()
+        user_adress = input("Введите Адрес: ")
+        user_info.append(user_adress)
+        print()
 
-    user_adress = input("Введите Адрес: ")
-    user_info.append(user_adress)
-    print()
+        user_data.append(user_info)
 
-    user_data.append(user_info)
-
-    print("Нажмите Enter для возврата в Меню ")
-    return user_data
+        print("Нажмите Enter для возврата в Меню ")
+        return user_data

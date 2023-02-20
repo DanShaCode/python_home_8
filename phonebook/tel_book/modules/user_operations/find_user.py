@@ -10,20 +10,38 @@ from modules.data_operations.add_data_CSV import *
 def user_search(user_data):
     os.system('cs||clear')
     print()
-    find_input = str(input("Введите данные пользователя: "))
+    print("  -= Телефонный справочник =-")
     print()
-    for user in user_data:
-        flag = 0
-        for data in user:
-            if find_input in data:
-                if flag == 0:
-                    print(f"ID : {user[0]} | FIRST NAME : {user[1]} | SECOND NAME: {user[2]} | TEL : {user[3]} | E-MAIL: {user[4]} | ADRESS : {user[5]}")
-                flag += 1
-                if flag == 1:
-                    continue
+    print("       ПОИСК КОНТАКТА")
     print()
-    user_await = input("Введите 'q' для возврата в Меню: ")
-    if user_await == 'q':
+    print("=================================")
+    print()
+    print("(1) Найти контакт")
+    print()
+    print("(Enter) Назад в Основное меню")
+    print()
+    print('----------------------------------')
+    print()
+    user_await = input("Введите соответствующую цифру из меню: ")
+    if user_await == '' or user_await == ' ':
         return user_data
-    else:
-        return user_data
+    if user_await == '1':
+        os.system('cs||clear')
+        find_input = str(input("Введите данные пользователя: "))
+        print()
+        os.system('cs||clear')
+        for user in user_data:
+            flag = 0
+            for data in user:
+                if find_input in data:
+                    if flag == 0:
+                        print(f"ID : {user[0]} | FIRST NAME : {user[1]} | SECOND NAME: {user[2]} | TEL : {user[3]} | E-MAIL: {user[4]} | ADRESS : {user[5]}")
+                    flag += 1
+                    if flag == 1:
+                        continue
+        print()
+        user_await = input("Нажмите Enter ")
+        if user_await == '' or user_await == ' ':
+            return user_data
+        else:
+            return user_data

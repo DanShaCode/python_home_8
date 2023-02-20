@@ -10,16 +10,26 @@ from modules.data_operations.add_data_CSV import *
 def operations_menu(user_data):
     os.system('cs||clear')
     print()
+    print("  -= Телефонный справочник =-")
+    print()
+    print("         МЕНЮ ЭКСПОРТА")
+    print()
+    print("=================================")
+    print()
     print("(1) Экспортировать данные в CSV")
     print()
     print("(2) Экспортировать данные в TXT")
     print()
-    user_input = int(input("Введите соответствующую цифру из Меню: "))
-    if user_input == 1:
+    print("(Enter) Выход в Основное меню")
+    print()
+    print('----------------------------------')
+    print()
+    user_input = input("Введите соответствующую цифру из Меню: ")
+    if user_input == '1':
         user_data = create_book_csv(user_data)
         return user_data
-    if user_input == 2:
+    if user_input == '2':
         user_data = create_book_txt(user_data)
-        return menu(user_data)
+        return user_data
     else:
         return user_data
